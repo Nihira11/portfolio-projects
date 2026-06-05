@@ -11,7 +11,7 @@ Power BI dashboard analysing Netflix titles, genres, countries, and release tren
 
 - Tools: Power BI, Excel/CSV
 - Repo: [Netflix Dashboard](https://github.com/Nihira11/netflix-dashboard)
-- Dashboard screenshots: ![Overview](https://github.com/Nihira11/netflix-dashboard/blob/main/netflix-content-analysis/screenshots/dashboard_overview.png)
+- Dashboard screenshot: ![Overview](https://github.com/Nihira11/netflix-dashboard/blob/main/netflix-content-analysis/screenshots/dashboard_overview.png)
 
 ---
 
@@ -20,6 +20,7 @@ A Streamlit web app that automatically generates dataset summaries, missing valu
 
 - Tools: Python, Streamlit, Pandas, Plotly, Matplotlib
 - Repo: [Automated EDA Tool](https://github.com/Nihira11/automated-eda-tool)
+- App screenshot: ![Overview](https://github.com/Nihira11/automated-eda-tool/blob/main/screenshots/overview.png)
 
 ---
 
