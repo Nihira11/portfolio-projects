@@ -11,7 +11,7 @@ Power BI dashboard analysing Netflix titles, genres, countries, and release tren
 
 - Tools: Power BI, Excel/CSV
 - Repo: [Netflix Dashboard](https://github.com/Nihira11/netflix-dashboard)
-- Dashboard screenshots: ![Overview]([netflix-content-analysis/screenshots/dashboard_overview.png](https://github.com/Nihira11/netflix-dashboard/raw/main/netflix-content-analysis/screenshots/dashboard_overview.png))
+- Dashboard screenshots: ![Overview](https://github.com/Nihira11/netflix-dashboard/blob/main/netflix-content-analysis/screenshots/dashboard_overview.png)
 
 ---
 
