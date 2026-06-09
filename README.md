@@ -29,6 +29,7 @@ A web app/project focused on predicting customer churn and giving retention insi
 
 - Tools: Python, Streamlit, Pandas, Scikit-learn, Plotly
 - Repo: [Customer Churn Project](https://github.com/Nihira11/telco-churn-retention-app)
+- App/Dashboard: ![Overview](https://github.com/Nihira11/bank-churn-intelligence/blob/main/screenshots/01_overview_kpi.png)
 
 ## Skills Demonstrated
 
