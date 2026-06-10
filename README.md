@@ -42,7 +42,7 @@ A Streamlit experimentation dashboard that combines frequentist A/B testing, Bay
 - Tools: Python, Streamlit, Pandas, NumPy, SciPy, Statsmodels, Plotly, ReportLab
 - Repo: [A/B Testing Decision Dashboard](https://github.com/Nihira11/ab-testing-decision-dashboard)
 - Live App: [Open Dashboard](https://ab-testing-decision-dashboard.streamlit.app/)
-- Dashboard screenshot: ![Overview]([https://github.com/Nihira11/ab-testing-decision-dashboard/blob/main/screenshots/01_home_dashboard.png](https://github.com/Nihira11/ab-testing-decision-dashboard/blob/main/screenshots/01_home_dashboard.png))
+- Dashboard screenshot: ![Overview](https://github.com/Nihira11/ab-testing-decision-dashboard/blob/main/screenshots/01_home_dashboard.png)
 
 ## Skills Demonstrated
 
