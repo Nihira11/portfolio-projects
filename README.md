@@ -12,7 +12,8 @@ Power BI dashboard analysing Netflix titles, genres, countries, and release tren
 - Tools: Power BI, Excel/CSV
 - Repo: [Netflix Dashboard](https://github.com/Nihira11/netflix-dashboard)
 - Dashboard screenshot: ![Overview](https://github.com/Nihira11/netflix-dashboard/blob/main/netflix-content-analysis/screenshots/dashboard_overview.png)
-- Highlights:
+
+Highlights:
 1. Catalogue split across Movies (71%) and TV Shows (29%), with genre, rating and country breakdowns
 2. Power Query cleaning (date parsing, splitting multi-value country/genre fields) and DAX measures (Total Titles, Peak Content Year)
 3. Cross-filtering across KPI cards, donut, genre bars, a content-growth area chart and a world map
@@ -26,7 +27,8 @@ A Streamlit web app that automatically generates dataset summaries, missing valu
 - Repo: [Automated EDA Tool](https://github.com/Nihira11/automated-eda-tool)
 - Live App: [Open Dashboard](https://automated-eda-tool.streamlit.app/)
 - App screenshot: ![Overview](https://github.com/Nihira11/automated-eda-tool/blob/main/screenshots/overview.png)
-- Highlights:
+
+Highlights:
 1. Upload any CSV and get an instant overview, automated insights and data-quality warnings
 2. Missing-value analysis, IQR-based outlier detection, distribution + skewness checks and correlation heatmaps
 3. Automatic target-variable analysis with driver ranking and feature-importance insights
@@ -41,7 +43,8 @@ An end-to-end churn prediction and retention analytics dashboard that scores cus
 - Repo: [Customer Churn Project](https://github.com/Nihira11/telco-churn-retention-app)
 - Live App: [Open Dashboard](https://bank-churn-intel.streamlit.app/)
 - App/Dashboard: ![Overview](https://github.com/Nihira11/bank-churn-intelligence/blob/main/screenshots/01_overview_kpi.png)
-- Highlights:
+
+Highlights:
 1. XGBoost final model (ROC-AUC 0.875) selected over Logistic Regression and Random Forest
 2. Live SHAP waterfall explainability for any customer profile in the Prediction Centre
 3. K-Means segmentation (k=4) into churn-risk personas, plus a revenue-at-risk framework (~$105.9M total exposure)
@@ -58,7 +61,8 @@ A Streamlit experimentation dashboard that combines frequentist A/B testing, Bay
 - Repo: [A/B Testing Decision Dashboard](https://github.com/Nihira11/ab-testing-decision-dashboard)
 - Live App: [Open Dashboard](https://ab-testing-decision-dashboard.streamlit.app/)
 - Dashboard screenshot: ![Overview](https://github.com/Nihira11/ab-testing-decision-dashboard/blob/main/screenshots/01_home_dashboard.png)
-- Highlights:
+
+Highlights:
 1. Frequentist (two-proportion z-test, confidence intervals, power, MDE) and Bayesian (Beta-Binomial posterior, P(treatment better), expected loss) engines side by side
 2. Sample Ratio Mismatch (SRM) health checks before analysis, plus a Decision Centre that turns statistics into ship / don’t-ship calls with revenue-impact projections
 3. Validated on the public Udacity e-commerce dataset (294,000+ observations) – correctly returned a DO NOT SHIP recommendation
@@ -74,7 +78,8 @@ An interactive R/Shiny dashboard for equity trend, risk and volatility analysis.
 - Repo: [Stock Trend & Volatility](https://github.com/Nihira11/stock-trend-volatility)
 - Live App: [Open Dashbaord](https://nihirasharma.shinyapps.io/stock-trend-volatility/)
 - Dashboard screenshot: ![Overview](https://github.com/Nihira11/stock-trend-volatility/blob/main/screenshots/overview.png?raw=true)
-- Highlights:
+
+Highlights:
 1. GARCH family (sGARCH / eGARCH / gjrGARCH) with model selection by BIC, a news-impact curve for the asymmetry and 10–60 day volatility forecasts
 2. Value-at-Risk and CVaR (Expected Shortfall) with Kupiec proportion-of-failures backtesting and an ARCH-LM pre-test for volatility clustering
 3. Out-of-sample 80/20 train–test validation of GARCH forecasts against a constant-volatility benchmark
@@ -91,9 +96,10 @@ A SQL-first fraud detection and risk-scoring pipeline. Feature engineering is do
 - Tools: PostgreSQL, Python, Pandas, Scikit-learn, XGBoost, LightGBM, SQL, Plotly.js, Tableau
 - Repo: [Fraud Risk Intelligence Platform](https://github.com/Nihira11/fraud-risk-intelligence-platform)
 - Live Dashboard: [Open Dashboard](https://nihira11.github.io/fraud-risk-intelligence-platform/dashboard/)
-- Tableau Public: [Open Tableau Dashboard](https://public.tableau.com/app/profile/nihira.sharma/viz/FraudRiskIntelligencePlatform/Fraud_Risk_Intelligence?publish=yes)
+- Tableau Public: [Open Dashboard](https://public.tableau.com/app/profile/nihira.sharma/viz/FraudRiskIntelligencePlatform/Fraud_Risk_Intelligence?publish=yes)
 - Dashboard screenshot: ![Overview](https://github.com/Nihira11/fraud-risk-intelligence-platform/blob/main/screenshots/dashboard_main.png)
-- Highlights:
+
+Highlights:
 1. SQL-first design: per-card amount z-scores, trailing-window velocity counts and haversine distances engineered as a PostgreSQL materialized view, with Python used only for the ML layer
 2. XGBoost final model (PR-AUC 0.883) selected from a five-model bake-off (vs LightGBM, Random Forest, Logistic Regression, Isolation Forest) on a time-based train/test split; lifts precision from the rule engine's 17% to 99.2% at equal recall
 3. Expected-loss ranking (P(fraud) × amount) turns scores into a capacity-aware review queue: reviewing the top 1,000 of 2,730 alerts catches 75% of all fraud and recovers ~$529K (85%) of fraud-dollar exposure
