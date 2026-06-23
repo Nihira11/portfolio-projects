@@ -2,7 +2,7 @@
 
 # Data Analytics / Data Science Portfolio
 
-Hi, I’m Nihira. This portfolio showcases my projects in data analytics, dashboards, machine learning, statistical inference and web-based data apps, across Power BI, Python/Streamlit and R/Shiny.
+Hi, I’m Nihira. This portfolio showcases my projects in data analytics, dashboards, machine learning, statistical inference and web-based data apps, across Power BI, Python/Streamlit, R/Shiny, SQL/PostgreSQL and Tableau.
 
 ## Projects
 
@@ -82,29 +82,35 @@ An interactive R/Shiny dashboard for equity trend, risk and volatility analysis.
 5. Works on US tickers, indices (^GSPC), and ASX names (CBA.AX); two-layer RDS + memoised caching for instant reloads
 6. All risk/volatility maths in pure, reusable R functions under R/, covered by testthat unit tests against hand-computed values
 
+---
+
+### 6. Fraud Risk Intelligence Platform
+
+A SQL-first fraud detection and risk-scoring pipeline. Feature engineering is done entirely in PostgreSQL, an XGBoost model is benchmarked against a transparent SQL rule engine and every transaction is ranked into an expected-loss alert queue served through a live, single-screen dashboard.
+
+- Tools: PostgreSQL, Python, Pandas, Scikit-learn, XGBoost, LightGBM, SQL, Plotly.js, Tableau
+- Repo: [Fraud Risk Intelligence Platform](https://github.com/Nihira11/fraud-risk-intelligence-platform)
+- Live Dashboard: [Open Dashboard](https://nihira11.github.io/fraud-risk-intelligence-platform/dashboard/)
+- Tableau Public: [Open Tableau Dashboard](https://public.tableau.com/app/profile/nihira.sharma/viz/FraudRiskIntelligencePlatform/Fraud_Risk_Intelligence?publish=yes)
+- Dashboard screenshot: ![Overview](https://github.com/Nihira11/fraud-risk-intelligence-platform/blob/main/screenshots/dashboard_main.png)
+- Highlights:
+1. SQL-first design: per-card amount z-scores, trailing-window velocity counts and haversine distances engineered as a PostgreSQL materialized view, with Python used only for the ML layer
+2. XGBoost final model (PR-AUC 0.883) selected from a five-model bake-off (vs LightGBM, Random Forest, Logistic Regression, Isolation Forest) on a time-based train/test split; lifts precision from the rule engine's 17% to 99.2% at equal recall
+3. Expected-loss ranking (P(fraud) × amount) turns scores into a capacity-aware review queue: reviewing the top 1,000 of 2,730 alerts catches 75% of all fraud and recovers ~$529K (85%) of fraud-dollar exposure
+4. Honest negative result documented: engineered geo-distance and impossible-travel features carry no signal because the Sparkov dataset's coordinates are synthetic
+5. Two dashboards from one pipeline: a custom HTML/CSS/JS single-screen risk console (Plotly.js, GitHub Pages) and a Tableau Public BI dashboard, plus EDA and model-development notebooks
+6. 1.3M transactions, 0.58% fraud rate; synthetic-data caveat stated throughout so the ~99% precision is read in context
+
+---
+
 ## Skills Demonstrated
 
-- Data cleaning and preprocessing
-- Exploratory data analysis (EDA)
-- Dashboard development (Power BI, Streamlit, Shiny)
-- Machine learning classification (XGBoost, Random Forest, Logistic Regression)
-- Model explainability (SHAP)
-- Customer segmentation (K-Means)
-- Business insight generation
-- Streamlit web app development
-- R / Shiny web app development
-- Git and GitHub documentation
-- A/B testing and experiment analysis
-- Bayesian inference
-- Statistical hypothesis testing
-- Power analysis and MDE estimation
-- Decision analysis and revenue impact modelling
-- Automated PDF report generation
-- Time-series and volatility modelling (GARCH / eGARCH / gjrGARCH)
-- Value-at-Risk, Expected Shortfall and risk backtesting (Kupiec, ARCH-LM)
-- Out-of-sample model validation
-- Quantitative / financial analytics
-- Unit testing and modular application architecture
+- **Languages & tools:** Python, R, SQL (PostgreSQL), Power BI, Tableau, Git
+- **Machine learning:** classification (XGBoost, Random Forest, Logistic Regression), model explainability (SHAP), out-of-sample validation
+- **Statistics & experimentation:** A/B testing, Bayesian inference, hypothesis testing, power analysis
+- **Time-series & quant:** volatility modelling (GARCH family), Value-at-Risk & Expected Shortfall, risk backtesting (Kupiec, ARCH-LM)
+- **Data engineering:** SQL feature engineering (materialized views, window functions), EDA, data cleaning
+- **Analytics & delivery:** dashboard development (Streamlit, Shiny, Power BI, Tableau), business insight generation, decision/expected-loss analysis
 
 ## Contact
 
