@@ -109,12 +109,33 @@ Highlights:
 
 ---
 
+### 7. Credit Risk Intelligence Platform
+
+An end-to-end credit scorecard built on the Home Credit Default Risk dataset. Feature engineering runs entirely in PostgreSQL across seven relational tables, a logistic scorecard is developed with WOE/IV selection and PDO scaling and benchmarked against XGBoost, and the full pipeline (decisioning, validation and fairness) is served through a live four-page Shiny dashboard.
+
+- Tools: R, PostgreSQL, Shiny (bslib), scorecard, xgboost, glm, caret, tidyverse, testthat
+- Repo: [Credit Risk Intelligence Platform](https://github.com/Nihira11/credit-risk-intelligence-platform)
+- Live Dashboard: [Open Dashboard](https://nihirasharma.shinyapps.io/credit-risk-intelligence-platform/)
+- Notebooks (GitHub Pages): [Model Development](https://nihira11.github.io/credit-risk-intelligence-platform/notebooks/03_modeling.html)
+- Dashboard screenshot: ![Overview](https://github.com/Nihira11/credit-risk-intelligence-platform/blob/main/screenshots/dashboard_performance.png) ![Overview Table](https://github.com/Nihira11/credit-risk-intelligence-platform/blob/main/screenshots/performance_table.png) 
+
+Highlights:
+1. SQL-first design: 58M+ rows across 7 relational tables aggregated in PostgreSQL into a 307,511-applicant analytics base, with WOE/IV feature engineering
+2. Logistic regression (16 features) chosen over an XGBoost benchmark for interpretability and regulatory transparency; caught and dropped 6 collinear count features that aliased to NA coefficients
+3. Bin-level PDO scorecard validated to reproduce the model near-exactly (Gini difference ~0.00007); honest no-leakage performance of Gini 0.31 / KS 0.23 / AUC 0.66
+4. Decision policy turns scores into approve/review/decline bands: 22% of applicants auto-approved at a 3.6% default rate (vs 8.1% overall), with the decline band capturing 32% of all defaults
+5. Full model-risk validation: ROC, calibration (MSE 0.0001), train→test PSI ≈ 0, and fairness across gender and age groups — predictions track each group's base rate with no added disparity
+6. Live four-page Shiny dashboard (Performance, Scorecard Explorer, interactive Risk Tool, Insights) backed by 28 testthat unit tests
+
+---
+
 ## Skills Demonstrated
 
 - **Languages & tools:** Python, R, SQL (PostgreSQL), Power BI, Tableau, Git
-- **Machine learning:** classification (XGBoost, Random Forest, Logistic Regression), model explainability (SHAP), out-of-sample validation
+- **Machine learning:** classification (XGBoost, Random Forest, Logistic Regression), credit scorecards (WOE/IV, PDO scaling), model explainability (SHAP), out-of-sample validation
 - **Statistics & experimentation:** A/B testing, Bayesian inference, hypothesis testing, power analysis
 - **Time-series & quant:** volatility modelling (GARCH family), Value-at-Risk & Expected Shortfall, risk backtesting (Kupiec, ARCH-LM)
+- **Credit risk & model validation:** WOE/IV feature selection, scorecard development, calibration, population stability (PSI), fairness assessment
 - **Data engineering:** SQL feature engineering (materialized views, window functions), EDA, data cleaning
 - **Analytics & delivery:** dashboard development (Streamlit, Shiny, Power BI, Tableau), business insight generation, decision/expected-loss analysis
 
