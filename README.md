@@ -1,97 +1,12 @@
 # Portfolio Projects
 
-# Data Analytics / Data Science Portfolio
-
-Hi, I’m Nihira. This portfolio showcases my projects in data analytics, dashboards, machine learning, statistical inference and web-based data apps, across Power BI, Python/Streamlit, R/Shiny, SQL/PostgreSQL and Tableau.
+Hi, I’m Nihira Sharma. This portfolio includes my projects in data analytics, machine learning, statistics, risk modelling and interactive dashboard development. The projects use tools such as Python, R, SQL, PostgreSQL, Power BI, Tableau, Streamlit and Shiny.
 
 ## Projects
 
-### 1. Netflix Dashboard
-Power BI dashboard analysing Netflix titles, genres, countries, and release trends.
+### 1. Fraud Risk Intelligence Platform
 
-- Tools: Power BI, Excel/CSV
-- Repo: [Netflix Dashboard](https://github.com/Nihira11/netflix-dashboard)
-- Dashboard screenshot: ![Overview](https://github.com/Nihira11/netflix-dashboard/blob/main/netflix-content-analysis/screenshots/dashboard_overview.png)
-
-Highlights:
-1. Catalogue split across Movies (71%) and TV Shows (29%), with genre, rating and country breakdowns
-2. Power Query cleaning (date parsing, splitting multi-value country/genre fields) and DAX measures (Total Titles, Peak Content Year)
-3. Cross-filtering across KPI cards, donut, genre bars, a content-growth area chart and a world map
-4. Insights: content additions peaked in 2019; the US leads volume (then India); Dramas and International content dominate; South Korea skews TV-heavy
----
-
-### 2. Automated EDA Tool
-A Streamlit web app that automatically generates dataset summaries, missing value analysis, distributions, correlations and outlier insights.
-
-- Tools: Python, Streamlit, Pandas, Plotly, Matplotlib
-- Repo: [Automated EDA Tool](https://github.com/Nihira11/automated-eda-tool)
-- Live App: [Open Dashboard](https://automated-eda-tool.streamlit.app/)
-- App screenshot: ![Overview](https://github.com/Nihira11/automated-eda-tool/blob/main/screenshots/overview.png)
-
-Highlights:
-1. Upload any CSV and get an instant overview, automated insights and data-quality warnings
-2. Missing-value analysis, IQR-based outlier detection, distribution + skewness checks and correlation heatmaps
-3. Automatic target-variable analysis with driver ranking and feature-importance insights
-4. Duplicate, high-cardinality and ID-column detection; modular modules/ design; tested on the Telco and Titanic datasets
-
----
-
-### 3. Customer Churn Prediction & Retention Dashboard
-An end-to-end churn prediction and retention analytics dashboard that scores customers, explains predictions and quantifies revenue exposure.
-
-- Tools: Python, Streamlit, Pandas, Scikit-learn, XGBoost, SHAP, Plotly
-- Repo: [Customer Churn Project](https://github.com/Nihira11/telco-churn-retention-app)
-- Live App: [Open Dashboard](https://bank-churn-intel.streamlit.app/)
-- App/Dashboard: ![Overview](https://github.com/Nihira11/bank-churn-intelligence/blob/main/screenshots/01_overview_kpi.png)
-
-Highlights:
-1. XGBoost final model (ROC-AUC 0.875) selected over Logistic Regression and Random Forest
-2. Live SHAP waterfall explainability for any customer profile in the Prediction Centre
-3. K-Means segmentation (k=4) into churn-risk personas, plus a revenue-at-risk framework (~$105.9M total exposure)
-4. Retention Centre with a threshold-filtered at-risk list and CSV export
-5. Caught and removed a data-leakage feature (Complain) that had inflated metrics to ~1.0 ROC-AUC; 10,000 customers, 20.38% churn rate
-
----
-
-### 4. A/B Testing + Decision Analysis Dashboard
-
-A Streamlit experimentation dashboard that combines frequentist A/B testing, Bayesian inference, power analysis, revenue impact modelling, and automated PDF reporting to support launch decisions.
-
-- Tools: Python, Streamlit, Pandas, NumPy, SciPy, Statsmodels, Plotly, ReportLab
-- Repo: [A/B Testing Decision Dashboard](https://github.com/Nihira11/ab-testing-decision-dashboard)
-- Live App: [Open Dashboard](https://ab-testing-decision-dashboard.streamlit.app/)
-- Dashboard screenshot: ![Overview](https://github.com/Nihira11/ab-testing-decision-dashboard/blob/main/screenshots/01_home_dashboard.png)
-
-Highlights:
-1. Frequentist (two-proportion z-test, confidence intervals, power, MDE) and Bayesian (Beta-Binomial posterior, P(treatment better), expected loss) engines side by side
-2. Sample Ratio Mismatch (SRM) health checks before analysis, plus a Decision Centre that turns statistics into ship / don’t-ship calls with revenue-impact projections
-3. Validated on the public Udacity e-commerce dataset (294,000+ observations) – correctly returned a DO NOT SHIP recommendation
-4. Stakeholder-ready PDF and Markdown report export
-
----
-
-### 5. Stock Trend Analysis & Volatility Insights
-
-An interactive R/Shiny dashboard for equity trend, risk and volatility analysis. It pulls live daily prices from Yahoo Finance, computes the indicators and risk statistics a desk analyst actually uses and fits a family of GARCH models to quantify and forecast volatility, including the leverage effect that makes downside shocks hit harder than upside ones.
-
-- Tools: R, Shiny (bslib), tidyquant, TTR, PerformanceAnalytics, rugarch, plotly, zoo, memoise, testthat
-- Repo: [Stock Trend & Volatility](https://github.com/Nihira11/stock-trend-volatility)
-- Live App: [Open Dashbaord](https://nihirasharma.shinyapps.io/stock-trend-volatility/)
-- Dashboard screenshot: ![Overview](https://github.com/Nihira11/stock-trend-volatility/blob/main/screenshots/overview.png?raw=true)
-
-Highlights:
-1. GARCH family (sGARCH / eGARCH / gjrGARCH) with model selection by BIC, a news-impact curve for the asymmetry and 10–60 day volatility forecasts
-2. Value-at-Risk and CVaR (Expected Shortfall) with Kupiec proportion-of-failures backtesting and an ARCH-LM pre-test for volatility clustering
-3. Out-of-sample 80/20 train–test validation of GARCH forecasts against a constant-volatility benchmark
-4. Five pages – Overview, Trends (SMA crossovers, RSI, MACD, Bollinger), Risk (VaR/CVaR, drawdown), Volatility (GARCH) and multi-ticker Compare
-5. Works on US tickers, indices (^GSPC), and ASX names (CBA.AX); two-layer RDS + memoised caching for instant reloads
-6. All risk/volatility maths in pure, reusable R functions under R/, covered by testthat unit tests against hand-computed values
-
----
-
-### 6. Fraud Risk Intelligence Platform
-
-A SQL-first fraud detection and risk-scoring pipeline. Feature engineering is done entirely in PostgreSQL, an XGBoost model is benchmarked against a transparent SQL rule engine and every transaction is ranked into an expected-loss alert queue served through a live, single-screen dashboard.
+A complete fraud detection platform that scores credit-card transactions and helps investigators decide which alerts to review first. Features are created in PostgreSQL, while an XGBoost model predicts fraud risk. Alerts are ranked by expected financial loss and displayed in an interactive investigation dashboard.
 
 - Tools: PostgreSQL, Python, Pandas, Scikit-learn, XGBoost, LightGBM, SQL, Plotly.js, Tableau
 - Repo: [Fraud Risk Intelligence Platform](https://github.com/Nihira11/fraud-risk-intelligence-platform)
@@ -99,45 +14,180 @@ A SQL-first fraud detection and risk-scoring pipeline. Feature engineering is do
 - Tableau Public: [Open Dashboard](https://public.tableau.com/app/profile/nihira.sharma/viz/FraudRiskIntelligencePlatform/Fraud_Risk_Intelligence?publish=yes)
 - Dashboard screenshot: ![Overview](https://github.com/Nihira11/fraud-risk-intelligence-platform/blob/main/screenshots/dashboard_main.png)
 
-Highlights:
-1. SQL-first design: per-card amount z-scores, trailing-window velocity counts and haversine distances engineered as a PostgreSQL materialized view, with Python used only for the ML layer
-2. XGBoost final model (PR-AUC 0.883) selected from a five-model bake-off (vs LightGBM, Random Forest, Logistic Regression, Isolation Forest) on a time-based train/test split; lifts precision from the rule engine's 17% to 99.2% at equal recall
-3. Expected-loss ranking (P(fraud) × amount) turns scores into a capacity-aware review queue: reviewing the top 1,000 of 2,730 alerts catches 75% of all fraud and recovers ~$529K (85%) of fraud-dollar exposure
-4. Honest negative result documented: engineered geo-distance and impossible-travel features carry no signal because the Sparkov dataset's coordinates are synthetic
-5. Two dashboards from one pipeline: a custom HTML/CSS/JS single-screen risk console (Plotly.js, GitHub Pages) and a Tableau Public BI dashboard, plus EDA and model-development notebooks
-6. 1.3M transactions, 0.58% fraud rate; synthetic-data caveat stated throughout so the ~99% precision is read in context
+**Highlights:**
+1. Ranks transactions using expected loss:
+   ```
+   Expected Loss = Probability of Fraud × Transaction Amount
+   ```
+   Reviewing the top 1,000 of 2,730 alerts finds 75% of all fraud cases and covers approximately $529,000, or 85% of the total fraud-dollar exposure
+2. Compared several machine learning models using a time-based train and test split. XGBoost achieved a PR-AUC of 0.883
+3. At the same recall level, XGBoost achieved 99.2% precision, compared with 53.5% for Logistic Regression and 17% for the SQL rule engine
+4. Features such as card-level spending z-scores, recent transaction counts, and geographic distances were created inside PostgreSQL
+5. Geographic distance and impossible-travel features were tested but removed because the synthetic merchant locations did not contain useful information
+6. Includes a custom HTML and JavaScript investigation dashboard, a Tableau Public dashboard and notebooks for data analysis and model development
+7. Uses 1.3 million synthetic transactions with a fraud rate of 0.58%. The synthetic-data limitation is clearly explained throughout the project
 
 ---
 
-### 7. Credit Risk Intelligence Platform
+### 2. Credit Risk Intelligence Platform
 
-An end-to-end credit scorecard built on the Home Credit Default Risk dataset. Feature engineering runs entirely in PostgreSQL across seven relational tables, a logistic scorecard is developed with WOE/IV selection and PDO scaling and benchmarked against XGBoost, and the full pipeline (decisioning, validation and fairness) is served through a live four-page Shiny dashboard.
+A complete credit scoring platform built using the Home Credit Default Risk dataset. PostgreSQL combines more than 58 million records from seven tables. Logistic Regression and XGBoost models are compared and the selected model is converted into an explainable credit scorecard.
 
-- Tools: R, PostgreSQL, Shiny (bslib), scorecard, xgboost, glm, caret, tidyverse, testthat
+- Tools: R, PostgreSQL, Shiny (bslib), scorecard, XGBoost, `glm`, `caret`, tidyverse, `testthat`
 - Repo: [Credit Risk Intelligence Platform](https://github.com/Nihira11/credit-risk-intelligence-platform)
 - Live Dashboard: [Open Dashboard](https://nihirasharma.shinyapps.io/credit-risk-intelligence-platform/)
 - Notebooks (GitHub Pages): [Model Development](https://nihira11.github.io/credit-risk-intelligence-platform/notebooks/03_modeling.html)
 - Dashboard screenshot: ![Overview](https://github.com/Nihira11/credit-risk-intelligence-platform/blob/main/screenshots/dashboard_performance.png) ![Overview Table](https://github.com/Nihira11/credit-risk-intelligence-platform/blob/main/screenshots/performance_table.png) 
 
-Highlights:
-1. SQL-first design: 58M+ rows across 7 relational tables aggregated in PostgreSQL into a 307,511-applicant analytics base, with WOE/IV feature engineering
-2. Logistic regression (16 features) chosen over an XGBoost benchmark for interpretability and regulatory transparency; caught and dropped 6 collinear count features that aliased to NA coefficients
-3. Bin-level PDO scorecard validated to reproduce the model near-exactly (Gini difference ~0.00007); honest no-leakage performance of Gini 0.31 / KS 0.23 / AUC 0.66
-4. Decision policy turns scores into approve/review/decline bands: 22% of applicants auto-approved at a 3.6% default rate (vs 8.1% overall), with the decline band capturing 32% of all defaults
-5. Full model-risk validation: ROC, calibration (MSE 0.0001), train→test PSI ≈ 0, and fairness across gender and age groups — predictions track each group's base rate with no added disparity
-6. Live four-page Shiny dashboard (Performance, Scorecard Explorer, interactive Risk Tool, Insights) backed by 28 testthat unit tests
+**Highlights:**
+1. Combined more than 58 million records from seven tables into an analytics dataset containing 307,511 applicants
+2. Used Weight of Evidence and Information Value to prepare and select useful credit risk features
+3. Selected a 16-feature Logistic Regression model instead of XGBoost because it was easier to explain and more suitable for a credit scorecard
+4. Found and removed six strongly related count features that caused missing model coefficients
+5. The final scorecard closely reproduced the model, with a Gini difference of approximately 0.00007
+6. The final model achieved:
+   - AUC: 0.66
+   - Gini: 0.31
+   - KS: 0.23
+7. Created approval, review and decline groups. The system automatically approved 22% of applicants with a 3.6% default rate, compared with an overall default rate of 8.1%
+8. Tested calibration, population stability and fairness across gender and age groups
+9. Includes a four-page Shiny dashboard and 28 automated tests
+
+---
+
+### 3. Customer Churn Prediction & Retention Dashboard (Bank Churn Intelligence)
+A customer churn prediction and retention platform that identifies customers who may leave the bank, explains each prediction and estimates the revenue at risk.
+
+- Tools: Python, Streamlit, Pandas, Scikit-learn, XGBoost, SHAP, Plotly
+- Repo: [Customer Churn Project](https://github.com/Nihira11/telco-churn-retention-app)
+- Live App: [Open Dashboard](https://bank-churn-intel.streamlit.app/)
+- App/Dashboard: ![Overview](https://github.com/Nihira11/bank-churn-intelligence/blob/main/screenshots/01_overview_kpi.png)
+
+**Highlights:**
+1. Compared Logistic Regression, Random Forest and XGBoost
+2. Selected XGBoost as the final model with a ROC-AUC score of 0.875
+3. Uses live SHAP waterfall charts to explain why an individual customer received a certain churn probability
+4. Divides customers into four groups using K-Means clustering
+5. Estimates approximately $105.9 million in total revenue at risk
+6. Includes a Retention Centre with customer filters, risk thresholds and CSV downloads
+7. Found and removed the Complain feature because it caused data leakage and increased ROC-AUC to an unrealistic score of approximately 1.0
+8. Uses 10,000 customer records with an overall churn rate of 20.38%
+
+---
+
+### 4. A/B Testing + Decision Analysis Dashboard
+
+An interactive A/B testing dashboard that helps teams decide whether a product change should be launched. It combines Frequentist and Bayesian analysis, measures business risk, estimates revenue impact and gives one of three recommendations: **Ship, Continue Testing or Do Not Ship**
+
+
+- Tools: Python, Streamlit, Pandas, NumPy, SciPy, Statsmodels, Plotly, ReportLab
+- Repo: [A/B Testing Decision Dashboard](https://github.com/Nihira11/ab-testing-decision-dashboard)
+- Live App: [Open Dashboard](https://ab-testing-decision-dashboard.streamlit.app/)
+- Dashboard screenshot: ![Overview](https://github.com/Nihira11/ab-testing-decision-dashboard/blob/main/screenshots/01_home_dashboard.png)
+
+**Highlights:**
+1. Tested using the public Udacity E-Commerce A/B Testing dataset, which contains more than 294,000 user records
+2. Correctly found that the treatment performed worse than the control and produced a DO NOT SHIP recommendation
+3. Includes Frequentist methods such as:
+   - Two-proportion z-test
+   - Confidence intervals
+   - Power analysis
+   - Minimum Detectable Effect
+4. Includes Bayesian methods such as:
+   - Beta-Binomial modelling
+   - Probability that treatment is better
+   - Expected improvement
+   - Expected loss
+5. Checks for Sample Ratio Mismatch (SRM) before analysing an experiment
+6. Converts statistical results into business recommendations and revenue estimates
+7. Automatically creates PDF and Markdown reports for stakeholders
+
+---
+
+### 5. Stock Trend Analysis & Volatility Insights
+
+An interactive R/Shiny dashboard for studying stock prices, trends, risk and volatility. The app downloads daily market data from Yahoo Finance, calculates technical indicators and risk measures and uses GARCH models to forecast volatility.
+
+- Tools: R, Shiny (bslib), tidyquant, TTR, PerformanceAnalytics, rugarch, plotly, zoo, memoise, `testthat`
+- Repo: [Stock Trend & Volatility](https://github.com/Nihira11/stock-trend-volatility)
+- Live App: [Open Dashbaord](https://nihirasharma.shinyapps.io/stock-trend-volatility/)
+- Dashboard screenshot: ![Overview](https://github.com/Nihira11/stock-trend-volatility/blob/main/screenshots/overview.png?raw=true)
+
+**Highlights:**
+1. Compares sGARCH, eGARCH, and gjrGARCH models and selects the best model using BIC
+2. Creates volatility forecasts for periods between 10 and 60 days
+3. Calculates Value at Risk and Conditional Value at Risk
+4. Uses the Kupiec test to check whether VaR is breached as often as expected
+5. Uses an ARCH-LM test to check whether volatility clustering is present before fitting GARCH models
+6. Tests forecasts using an 80/20 train and test split and compares them with a constant-volatility model
+7. Includes five dashboard pages:
+   - Overview
+   - Trends
+   - Risk
+   - Volatility
+   - Multi-ticker comparison
+8. Supports US stocks, market indices such as `^GSPC` and Australian stocks such as `CBA.AX`
+9. Stores downloaded prices and model results to make repeat analysis faster
+10. Keeps the financial calculations in reusable R functions with automated tests
+
+---
+
+### 6. Automated EDA Tool
+An interactive Streamlit app that automatically analyses uploaded CSV files. It creates dataset summaries, finds missing values and outliers, studies distributions and correlations, and produces automatic insights without requiring code.
+
+- Tools: Python, Streamlit, Pandas, Plotly, Matplotlib
+- Repo: [Automated EDA Tool](https://github.com/Nihira11/automated-eda-tool)
+- Live App: [Open Dashboard](https://automated-eda-tool.streamlit.app/)
+- App screenshot: ![Overview](https://github.com/Nihira11/automated-eda-tool/blob/main/screenshots/overview.png)
+
+**Highlights:**
+1. Upload any CSV file and receive an instant dataset overview
+2. Automatically identifies:
+   - Missing values
+   - Possible outliers
+   - Skewed columns
+   - Strong correlations
+   - Duplicate records
+   - High-cardinality columns
+   - Possible ID columns
+3. Uses the IQR method to detect outliers
+4. Allows users to select a target variable and view its most important drivers
+5. Uses separate Python modules for each analysis page
+6. Tested using the Telco Customer Churn and Titanic datasets
+
+---
+
+### 7. Netflix Dashboard
+A Power BI dashboard that analyses Netflix movies and television shows by genre, country, rating, and release year.
+
+- Tools: Power BI, Power Query, DAX, Excel, CSV
+- Repo: [Netflix Dashboard](https://github.com/Nihira11/netflix-dashboard)
+- Dashboard screenshot: ![Overview](https://github.com/Nihira11/netflix-dashboard/blob/main/netflix-content-analysis/screenshots/dashboard_overview.png)
+
+**Highlights:**
+1. Shows that the Netflix catalogue contains approximately:
+   - 71% movies
+   - 29% television shows
+2. Uses Power Query to clean dates and separate columns containing multiple countries or genres
+3. Uses DAX to calculate measures such as Total Titles and Peak Content Year
+4. Includes interactive filters across KPI cards, charts, and a world map
+5. Main findings include:
+   - Content additions reached their highest level in 2019
+   - The United States has the most titles, followed by India
+   - Drama and international content are the largest categories
+   - South Korea has a higher share of television content
 
 ---
 
 ## Skills Demonstrated
 
-- **Languages & tools:** Python, R, SQL (PostgreSQL), Power BI, Tableau, Git
-- **Machine learning:** classification (XGBoost, Random Forest, Logistic Regression), credit scorecards (WOE/IV, PDO scaling), model explainability (SHAP), out-of-sample validation
-- **Statistics & experimentation:** A/B testing, Bayesian inference, hypothesis testing, power analysis
-- **Time-series & quant:** volatility modelling (GARCH family), Value-at-Risk & Expected Shortfall, risk backtesting (Kupiec, ARCH-LM)
-- **Credit risk & model validation:** WOE/IV feature selection, scorecard development, calibration, population stability (PSI), fairness assessment
-- **Data engineering:** SQL feature engineering (materialized views, window functions), EDA, data cleaning
-- **Analytics & delivery:** dashboard development (Streamlit, Shiny, Power BI, Tableau), business insight generation, decision/expected-loss analysis
+- **Languages & Querying:** Python, R, SQL/PostgreSQL
+- **Machine Learning:** XGBoost, LightGBM, Logistic Regression, Random Forest, Isolation Forest, K-Means clustering, SHAP explainability, feature engineering (WOE/IV, z-scores), data leakage detection
+- **Risk & Statistics:** Credit scorecard modelling, GARCH volatility forecasting, VaR/CVaR, Frequentist & Bayesian A/B testing, hypothesis testing, backtesting (Kupiec, ARCH-LM)
+- **Data Engineering:** Large-scale SQL feature pipelines (1M–58M+ records), automated EDA, outlier/missing-value detection
+- **Dashboards & BI:** Streamlit, Shiny, Power BI, Tableau, Plotly
+- **Software Practices:** Automated testing, modular code, reproducible notebooks, version control (Git/GitHub)
+- **Business Impact:** Translating models into financial metrics (expected loss, revenue at risk) and stakeholder-ready recommendations
 
 ## Contact
 
