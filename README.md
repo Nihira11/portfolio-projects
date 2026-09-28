@@ -1,6 +1,6 @@
 # Portfolio Projects
 
-Hi, I’m Nihira Sharma. This portfolio includes my projects in data analytics, machine learning, statistics, risk modelling and interactive dashboard development. The projects use tools such as Python, R, SQL, PostgreSQL, Power BI, Tableau, Streamlit and Shiny.
+Hi, I’m Nihira Sharma. This portfolio includes my projects in data analytics, machine learning, natural language processing, statistics, risk modelling and interactive dashboard development. The projects use tools such as Python, R, SQL, PostgreSQL, Power BI, Tableau, Streamlit and Shiny.
 
 ## Projects
 
@@ -55,7 +55,30 @@ A complete credit scoring platform built using the Home Credit Default Risk data
 
 ---
 
-### 3. Customer Churn Prediction & Retention Dashboard (Bank Churn Intelligence)
+### 3. Resume ↔ Job Matching Engine
+
+An ATS-style resume screener you can see inside. It scores a resume against a job posting the way a real Applicant Tracking System would — hard skill overlap first, keywords second, semantics last – and shows every number with the weight that produced it, rather than a single unexplained percentage. Calibrated against 40 real job postings labelled by an actual candidate.
+
+- Tools: Python, PostgreSQL + pgvector, spaCy, sentence-transformers (MiniLM), BM25, Streamlit, pdfplumber, python-docx
+- Repo: [Resume ↔ Job Matching Engine](https://github.com/Nihira11/resume-matching-engine)
+- Live App: [Open App](https://resume-matching-engine.streamlit.app/)
+- App screenshot: ![Match results](https://github.com/Nihira11/resume-matching-engine/blob/main/images/05-match-score.png?raw=true)
+
+**Highlights:**
+1. Scores each pair across five weighted components (skill overlap, keyword BM25, title and seniority, experience and semantic similarity) and publishes the weight and contribution behind every number instead of a single percentage
+2. Drops any component that has no signal and renormalises the rest, rather than scoring it zero and quietly dragging the result down
+3. Matches skills against a 14,063-term taxonomy (ESCO, plus 124 curated modern tools ESCO has never heard of)
+4. Calibrated against 40 real job postings labelled by an actual candidate: verdict thresholds moved from 70/45 to 37/30 and 162 weightings were tested. No posting labelled a good fit is rejected, and none that was ruled out passes
+5. Scores ATS parsability separately from content, checking tables, multi-column layouts, images, headers and footers, because a resume can match perfectly on content and still be shredded by the parser
+6. Re-measured the one weakness that had been guessed at rather than tested. A pooled AUC of 0.68 turned out to hide a split: 0.97 at mid level and an inverted 0.33 at senior. The cause recorded in the docs was wrong; two real bugs were found in its place, and the fix was reported honestly as moving the headline within noise
+7. Replaced a 99,400-pattern spaCy `PhraseMatcher` with a token n-gram lookup, cutting 313MB from peak memory
+8. Found and fixed a credential leak that printed the database password into user-visible error banners
+9. Gap analysis names the related skills a candidate already has, drawn from skills that share ESCO occupations with the missing one
+10. 134 automated tests, none of which need a database. Uploaded data is scoped to the browser session and deleted after 24 hours
+
+---
+
+### 4. Customer Churn Prediction & Retention Dashboard (Bank Churn Intelligence)
 A customer churn prediction and retention platform that identifies customers who may leave the bank, explains each prediction and estimates the revenue at risk.
 
 - Tools: Python, Streamlit, Pandas, Scikit-learn, XGBoost, SHAP, Plotly
@@ -75,7 +98,7 @@ A customer churn prediction and retention platform that identifies customers who
 
 ---
 
-### 4. A/B Testing + Decision Analysis Dashboard
+### 5. A/B Testing + Decision Analysis Dashboard
 
 An interactive A/B testing dashboard that helps teams decide whether a product change should be launched. It combines Frequentist and Bayesian analysis, measures business risk, estimates revenue impact and gives one of three recommendations: **Ship, Continue Testing or Do Not Ship**
 
@@ -104,7 +127,7 @@ An interactive A/B testing dashboard that helps teams decide whether a product c
 
 ---
 
-### 5. Stock Trend Analysis & Volatility Insights
+### 6. Stock Trend Analysis & Volatility Insights
 
 An interactive R/Shiny dashboard for studying stock prices, trends, risk and volatility. The app downloads daily market data from Yahoo Finance, calculates technical indicators and risk measures and uses GARCH models to forecast volatility.
 
@@ -132,7 +155,7 @@ An interactive R/Shiny dashboard for studying stock prices, trends, risk and vol
 
 ---
 
-### 6. Automated EDA Tool
+### 7. Automated EDA Tool
 An interactive Streamlit app that automatically analyses uploaded CSV files. It creates dataset summaries, finds missing values and outliers, studies distributions and correlations, and produces automatic insights without requiring code.
 
 - Tools: Python, Streamlit, Pandas, Plotly, Matplotlib
@@ -157,7 +180,7 @@ An interactive Streamlit app that automatically analyses uploaded CSV files. It 
 
 ---
 
-### 7. Netflix Dashboard
+### 8. Netflix Dashboard
 A Power BI dashboard that analyses Netflix movies and television shows by genre, country, rating, and release year.
 
 - Tools: Power BI, Power Query, DAX, Excel, CSV
@@ -183,7 +206,8 @@ A Power BI dashboard that analyses Netflix movies and television shows by genre,
 
 - **Languages & Querying:** Python, R, SQL/PostgreSQL
 - **Machine Learning:** XGBoost, LightGBM, Logistic Regression, Random Forest, Isolation Forest, K-Means clustering, SHAP explainability, feature engineering (WOE/IV, z-scores), data leakage detection
-- **Risk & Statistics:** Credit scorecard modelling, GARCH volatility forecasting, VaR/CVaR, Frequentist & Bayesian A/B testing, hypothesis testing, backtesting (Kupiec, ARCH-LM)
+- **NLP & Search:** spaCy entity extraction, taxonomy matching against 14k terms, sentence-transformer embeddings, pgvector similarity search, BM25 keyword scoring
+- **Risk & Statistics:** Credit scorecard modelling, GARCH volatility forecasting, VaR/CVaR, Frequentist & Bayesian A/B testing, hypothesis testing, backtesting (Kupiec, ARCH-LM), threshold calibration against labelled data
 - **Data Engineering:** Large-scale SQL feature pipelines (1M–58M+ records), automated EDA, outlier/missing-value detection
 - **Dashboards & BI:** Streamlit, Shiny, Power BI, Tableau, Plotly
 - **Software Practices:** Automated testing, modular code, reproducible notebooks, version control (Git/GitHub)
