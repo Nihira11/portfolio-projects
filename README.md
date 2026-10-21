@@ -1,6 +1,7 @@
 # Portfolio Projects
 
-Hi, I’m Nihira Sharma. This portfolio includes my projects in data analytics, machine learning, natural language processing, statistics, risk modelling and interactive dashboard development. The projects use tools such as Python, R, SQL, PostgreSQL, Power BI, Tableau, Streamlit and Shiny.
+Hi, I’m Nihira Sharma. This portfolio includes my projects in data analytics, machine learning, natural language processing, AI-assisted data analysis, statistics, risk modelling and interactive dashboard development. The projects use tools such as Python, R, SQL, PostgreSQL, SQLite, the OpenAI Agents SDK, Power BI, Tableau, Streamlit and Shiny.
+
 
 ## Projects
 
@@ -78,7 +79,31 @@ An ATS-style resume screener you can see inside. It scores a resume against a jo
 
 ---
 
-### 4. Customer Churn Prediction & Retention Dashboard (Bank Churn Intelligence)
+### 4. Ask Your Data — AI Data Analysis Chatbot
+
+A local data analysis chatbot that lets users upload CSV files, ask questions in plain English and refine answers through follow-up questions. It uses the OpenAI Agents SDK to query a local SQLite database and shows the executed SQL and result rows behind each query-based answer.
+
+- Tools: Python, Textual, SQLite, SQLGlot, OpenAI Agents SDK, Rich, pytest
+- Repo: [Ask Your Data](https://github.com/Nihira11/ask-your-data-chatbot)
+- PDF Walkthrough: [View Project Walkthrough](https://github.com/Nihira11/ask-your-data-chatbot/blob/main/docs/ask-your-data-walkthrough.pdf)
+- Screenshots: [Explore All 12 Screenshots](https://github.com/Nihira11/ask-your-data-chatbot/tree/main/screenshots)
+- App screenshot: ![AI answer with a formatted product-line table and a View results button](https://github.com/Nihira11/ask-your-data-chatbot/blob/main/screenshots/04-ai-formatted-answer.png?raw=true)
+
+**Highlights:**
+
+1. Imports CSV files with a preview of row counts, inferred column types and missing values; includes a free retail demo and an AI mode using the user's own API account
+2. Validates generated SQL before running it against a read-only database connection, with query timeouts and result limits
+3. Gives each query-based answer its own results view containing the executed SQL, returned rows, dataset columns and definition sources
+4. Supports follow-up filters, such as narrowing Dinner to Sunday dinner and then to non-smokers while retaining earlier conditions
+5. Saves explicitly confirmed column meanings with the dataset so they can be reused across chats, restarts and exact CSV re-uploads
+6. Includes formatted Markdown answers, visible loading states, editable drafts while waiting, saved chats and CSV exports for every query result in a conversation
+7. Passed 153 automated tests and 31 offline checks, plus 12 live-AI evaluation cases across retail, supermarket and restaurant tips datasets; these are targeted regression checks rather than a general accuracy benchmark
+8. Includes an opt-in live evaluation runner that compares results with independently calculated CSV references and records SQL, latency and token usage
+9. Keeps chats and imported data on the user's computer and excludes API credentials, private storage and evaluation reports from the repository
+
+---
+
+### 5. Customer Churn Prediction & Retention Dashboard (Bank Churn Intelligence)
 A customer churn prediction and retention platform that identifies customers who may leave the bank, explains each prediction and estimates the revenue at risk.
 
 - Tools: Python, Streamlit, Pandas, Scikit-learn, XGBoost, SHAP, Plotly
@@ -98,7 +123,7 @@ A customer churn prediction and retention platform that identifies customers who
 
 ---
 
-### 5. A/B Testing + Decision Analysis Dashboard
+### 6. A/B Testing + Decision Analysis Dashboard
 
 An interactive A/B testing dashboard that helps teams decide whether a product change should be launched. It combines Frequentist and Bayesian analysis, measures business risk, estimates revenue impact and gives one of three recommendations: **Ship, Continue Testing or Do Not Ship**
 
@@ -127,7 +152,7 @@ An interactive A/B testing dashboard that helps teams decide whether a product c
 
 ---
 
-### 6. Stock Trend Analysis & Volatility Insights
+### 7. Stock Trend Analysis & Volatility Insights
 
 An interactive R/Shiny dashboard for studying stock prices, trends, risk and volatility. The app downloads daily market data from Yahoo Finance, calculates technical indicators and risk measures and uses GARCH models to forecast volatility.
 
@@ -155,7 +180,7 @@ An interactive R/Shiny dashboard for studying stock prices, trends, risk and vol
 
 ---
 
-### 7. Automated EDA Tool
+### 8. Automated EDA Tool
 An interactive Streamlit app that automatically analyses uploaded CSV files. It creates dataset summaries, finds missing values and outliers, studies distributions and correlations, and produces automatic insights without requiring code.
 
 - Tools: Python, Streamlit, Pandas, Plotly, Matplotlib
@@ -180,7 +205,7 @@ An interactive Streamlit app that automatically analyses uploaded CSV files. It 
 
 ---
 
-### 8. Netflix Dashboard
+### 9. Netflix Dashboard
 A Power BI dashboard that analyses Netflix movies and television shows by genre, country, rating, and release year.
 
 - Tools: Power BI, Power Query, DAX, Excel, CSV
@@ -204,14 +229,16 @@ A Power BI dashboard that analyses Netflix movies and television shows by genre,
 
 ## Skills Demonstrated
 
-- **Languages & Querying:** Python, R, SQL/PostgreSQL
+- **Languages & Querying:** Python, R, SQL, PostgreSQL, SQLite
 - **Machine Learning:** XGBoost, LightGBM, Logistic Regression, Random Forest, Isolation Forest, K-Means clustering, SHAP explainability, feature engineering (WOE/IV, z-scores), data leakage detection
 - **NLP & Search:** spaCy entity extraction, taxonomy matching against 14k terms, sentence-transformer embeddings, pgvector similarity search, BM25 keyword scoring
+- **AI Applications:** OpenAI Agents SDK, natural-language SQL analysis, SQL validation, follow-up context, persistent dataset definitions, live-AI regression evaluation
 - **Risk & Statistics:** Credit scorecard modelling, GARCH volatility forecasting, VaR/CVaR, Frequentist & Bayesian A/B testing, hypothesis testing, backtesting (Kupiec, ARCH-LM), threshold calibration against labelled data
 - **Data Engineering:** Large-scale SQL feature pipelines (1M–58M+ records), automated EDA, outlier/missing-value detection
 - **Dashboards & BI:** Streamlit, Shiny, Power BI, Tableau, Plotly
-- **Software Practices:** Automated testing, modular code, reproducible notebooks, version control (Git/GitHub)
+- **Software Practices:** Automated testing, modular code, reproducible notebooks, Textual terminal interfaces, independent result verification, version control (Git/GitHub)
 - **Business Impact:** Translating models into financial metrics (expected loss, revenue at risk) and stakeholder-ready recommendations
+
 
 ## Contact
 
